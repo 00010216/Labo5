@@ -16,8 +16,8 @@ public class PagerAdapter extends FragmentStatePagerAdapter {
     @Override
     public Fragment getItem(int position) {
         switch(position){
-            case 0: FavoritesFragment tab1 = new FavoritesFragment(); return tab1;
-            case 1: SeriesFragment tab2 = new SeriesFragment(); return tab2;
+            case 0: SeriesFragment tab1 = new SeriesFragment(); return tab1;
+            case 1: FavoritesFragment tab2 = new FavoritesFragment(); return tab2;
             default: return null;
         }
     }
