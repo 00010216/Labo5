@@ -1,4 +1,4 @@
-package com.meag.recycleviewlabo5_00010216;
+package com.example.kcruz.seriesapp;
 
 /**
  * Created by UCA on 19/04/2018.
