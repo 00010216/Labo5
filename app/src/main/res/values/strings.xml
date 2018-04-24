@@ -4,4 +4,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="Series">Series</string>
     <string name="Favorites">Favorites</string>
+    <string name="flash">Flash</string>
+    <string name="twd">The Walking Dead</string>
+    <string name="bbad">Breaking Bad</string>
 </resources>
