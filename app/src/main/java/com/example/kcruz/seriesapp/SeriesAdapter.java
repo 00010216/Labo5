@@ -1,4 +1,4 @@
-package com.meag.recycleviewlabo5_00010216;
+package com.example.kcruz.seriesapp;
 
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
@@ -12,7 +12,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
-
 
 
 /**
