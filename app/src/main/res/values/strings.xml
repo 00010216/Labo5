@@ -2,7 +2,6 @@
     <string name="app_name">Series App</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="Series">Series</string>
     <string name="Favorites">Favorites</string>
 </resources>
