@@ -79,7 +79,7 @@ public class FavoritesFragment extends Fragment {
 
         prepareSeries();
 
-        SeriesAdapter adapter = new SeriesAdapter(seriesList);
+        FavoritesAdapter adapter = new FavoritesAdapter(seriesList);
         recyclerSeries.setAdapter(adapter);
         return view;
     }
