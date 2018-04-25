@@ -4,9 +4,13 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import java.util.ArrayList;
 
 
 /**
@@ -28,6 +32,9 @@ public class FavoritesFragment extends Fragment {
     private String mParam2;
 
     private OnFragmentInteractionListener mListener;
+
+    RecyclerView recyclerSeries;
+    ArrayList<Serie> seriesList;
 
     public FavoritesFragment() {
         // Required empty public constructor
@@ -64,7 +71,26 @@ public class FavoritesFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_favorites, container, false);
+        View view = inflater.inflate(R.layout.fragment_series, container, false);
+        // genera instance
+        seriesList = new ArrayList<>();
+        recyclerSeries = view.findViewById(R.id.recycler_series_Id); //no s usa findView directamente sino que se usa la vista como intermediario
+        recyclerSeries.setLayoutManager(new LinearLayoutManager(getContext()));//indicando que tipo de recycler se necesita
+
+        prepareSeries();
+
+        SeriesAdapter adapter = new SeriesAdapter(seriesList);
+        recyclerSeries.setAdapter(adapter);
+        return view;
+    }
+
+    public void prepareSeries(){
+        String TAG = "Mensaje";
+        /*informacion quemada de los cardview, al usar base de datos esto es lo unico que cambia
+         * porque se pone con la notacion de sql lite*/
+        seriesList.add(new Serie("Flash","13", R.drawable.flash, "TV show created by Robert"));
+        seriesList.add(new Serie("The Walking Dead","13", R.drawable.twd, "TV show created by Robert"));
+        seriesList.add(new Serie("Breaking bad","13", R.drawable.bbad, "TV show created by Vince Gilligan"));
     }
 
     // TODO: Rename method, update argument and hook method into UI event
