@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:scaleType="centerCrop"
         android:layout_height="150dp"
-        android:src="@drawable/starwars"
+        android:src="@drawable/flash"
          />
     
     <LinearLayout
@@ -33,7 +33,7 @@
             android:layout_marginRight="8dp"
             android:gravity="center_vertical"
             android:textAppearance="?android:textAppearanceLarge"
-            android:text="@string/star_wars_the_last_jedi"/>
+            android:text="@string/flash"/>
         
         <Button
             android:id="@+id/btn_ver"
