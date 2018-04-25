@@ -33,7 +33,7 @@ public class SeriesAdapter extends RecyclerView.Adapter<SeriesAdapter.SeriesView
             card = itemView.findViewById(R.id.card_view);
             name = itemView.findViewById(R.id.name);
             img = itemView.findViewById(R.id.img);
-            btn = itemView.findViewById(R.id.btn_ver);
+            btn = itemView.findViewById(R.id.check_box);
         }
     }
 
