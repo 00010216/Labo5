@@ -21,17 +21,6 @@ public class MainActivity extends AppCompatActivity implements FavoritesFragment
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        series = new ArrayList<>();
-        rv = findViewById(R.id.recycler);
-        rv.setHasFixedSize(true);
-        lManager = new LinearLayoutManager(this);
-        rv.setLayoutManager(lManager);
-
-        prepareSeries();
-
-        adapter = new SeriesAdapter(series);
-        rv.setAdapter(adapter);
-
         TabLayout tabLayout = (TabLayout)findViewById(R.id.tablayout); //guardando la vista del tablayout en un objeto
         tabLayout.addTab(tabLayout.newTab().setText(R.string.Series)); //asignandole el nombre respectivo al tab
         tabLayout.addTab(tabLayout.newTab().setText(R.string.Favorites));
@@ -61,16 +50,14 @@ public class MainActivity extends AppCompatActivity implements FavoritesFragment
         });
     }
 
+
     @Override
     public void onFragmentInteraction(Uri uri) {
 
     }
-    public void prepareSeries(){
-        String TAG = "Mensaje";
-        series = new ArrayList<>();
-        series.add(new Serie("Flash","13", R.drawable.flash, "TV show created by Robert"));
-        series.add(new Serie("The Walking Dead","13", R.drawable.twd, "TV show created by Robert"));
-        series.add(new Serie("Breaking bad","13", R.drawable.bbad, "TV show created by Vince Gilligan"));
-    }
 
+    @Override
+    public void onPointerCaptureChanged(boolean hasCapture) {
+
+    }
 }
